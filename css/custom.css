@@ -1,33 +1,33 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 body {
-	display: block;
-	background: whitesmoke;
-	color: #4d4d4d;
-	font-size: 16px;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+    display: block;
+    background: whitesmoke;
+    color: #4d4d4d;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 div {
-	display: block;
+    display: block;
 }
 
 #container {
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .centered {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*
@@ -37,60 +37,60 @@ Start sidebar styles
 */
 
 .sidebar {
-	left: 0;
-	width: 250px;
-	top: 0;
-	bottom: 0;
-	position: fixed;
-	z-index: 1001;
+    left: 0;
+    width: 250px;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1001;
 }
 
 .sidebar .bumper {
-	background: #707070;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 250px;
-	height: 90px;
-	-webkit-transition: height 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	transition: height 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	z-index: 20;
+    background: #707070;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 90px;
+    -webkit-transition: height 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: height 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    z-index: 20;
 }
 
 .sidebar .wrap {
-	position: fixed;
-	background: #404040;
-	padding-top: 90px;
-	top: 0;
-	bottom: 0;
-	/*overflow-y: scroll;*/
-	width: 250px;
-	-webkit-transition: padding 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	transition: padding 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	-webkit-overflow-scrolling: touch;
+    position: fixed;
+    background: #404040;
+    padding-top: 90px;
+    top: 0;
+    bottom: 0;
+    /*overflow-y: scroll;*/
+    width: 250px;
+    -webkit-transition: padding 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: padding 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    -webkit-overflow-scrolling: touch;
 }
 
 .sidebar ol {
-	list-style: none;
-	margin: 0;
-	padding: 0
+    list-style: none;
+    margin: 0;
+    padding: 0
 }
 
 .sidebar .sidebar-list-el {
-	position: relative;
-	padding: 15px;
+    position: relative;
+    padding: 15px;
 }
 
 .sidebar .sidebar-list-el:hover {
-	background: #999989;
+    background: #999989;
 }
 
 .sidebar .sidebar-item {
-	font-family: Tahoma, sans-serif;
-	margin-bottom: 6px;
-	color: white;
-	font-size: 25px;
-	line-height: 1.52381;
+    font-family: Tahoma, sans-serif;
+    margin-bottom: 6px;
+    color: white;
+    font-size: 25px;
+    line-height: 1.52381;
 }
 
 /*
@@ -106,40 +106,40 @@ Start topbar styles
 */
 
 .topbar {
-	padding-left: 250px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 90px;
-	bottom: 0;
-	background-color: white;
-	-webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	z-index: 1000;
+    padding-left: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    z-index: 1000;
 }
 
 .topbar .header {
-	height: 100%;
-	margin: 0;
-	padding-top: 22px;
-	-webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	color: #333333;
-	font-size: 40px;
-	letter-spacing: -2px;
-	text-align: center;
-	text-transform: capitalize;
+    height: 100%;
+    margin: 0;
+    padding-top: 22px;
+    -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    color: #333333;
+    font-size: 40px;
+    letter-spacing: -2px;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .topbar .title {
-	color: #58ade3;
-	font-size: 40px;
-	font-weight: bold;
-	font-family: Tahoma;
-	letter-spacing: -2px;
-	text-align: center;
-	text-transform: capitalize;
+    color: #58ade3;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Tahoma;
+    letter-spacing: -2px;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 /*
@@ -155,25 +155,25 @@ Start content styles
 */
 
 .page-wrap {
-	padding-left: 250px;
-	width: 100%;
+    padding-left: 250px;
+    width: 100%;
 }
 
 #content {
-	padding-top: 90px;
+    padding-top: 90px;
 }
 
 .content-title {
-	overflow: hidden;
-	margin: 50px auto 0 auto;
-	max-width: 1200px;
-	font-size: 60px;
-	font-family: Tahoma;
-	text-align: center;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+    max-width: 1200px;
+    font-size: 60px;
+    font-family: Tahoma;
+    text-align: center;
 }
 
 .content-body {
-	max-width: 555px;
+    max-width: 555px;
 }
 
 
