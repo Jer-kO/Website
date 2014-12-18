@@ -12,12 +12,12 @@
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = "hash.coding.edge@gmail.com";                 // SMTP username
-    $mail->Password = "#trucoder";                           // SMTP password
+    $mail->Username = "coding.edge.smtp@gmail.com";                 // SMTP username
+    $mail->Password = "sxqWkz9NFC";                           // SMTP password
     $mail->SMTPSecure = "ssl";                         // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
-    $mail->From = "hash.coding.edge@gmail.com";
+    $mail->From = "coding.edge.smtp@gmail.com";
     $mail->FromName = "$name";
     $mail->addAddress("hash.coding.edge@gmail.com", "codingEdge Team");     // Add a recipient
 
