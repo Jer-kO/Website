@@ -8,11 +8,13 @@ html {
 
 body {
     display: block;
+    /*background: #EAEAEA;*/
     background: whitesmoke;
     color: #4d4d4d;
     font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    margin: 0px;
 }
 
 div {
@@ -30,74 +32,6 @@ div {
     margin-right: auto;
 }
 
-/*
-======================================================================
-Start sidebar styles
-======================================================================
-*/
-
-.sidebar {
-    left: 0;
-    width: 250px;
-    top: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 1001;
-}
-
-.sidebar .bumper {
-    background: #707070;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 90px;
-    -webkit-transition: height 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    transition: height 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    z-index: 20;
-}
-
-.sidebar .wrap {
-    position: fixed;
-    background: #404040;
-    padding-top: 90px;
-    top: 0;
-    bottom: 0;
-    /*overflow-y: scroll;*/
-    width: 250px;
-    -webkit-transition: padding 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    transition: padding 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    -webkit-overflow-scrolling: touch;
-}
-
-.sidebar ol {
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
-.sidebar .sidebar-list-el {
-    position: relative;
-    padding: 15px;
-}
-
-.sidebar .sidebar-list-el:hover {
-    background: #999989;
-}
-
-.sidebar .sidebar-item {
-    font-family: Tahoma, sans-serif;
-    margin-bottom: 6px;
-    color: white;
-    font-size: 25px;
-    line-height: 1.52381;
-}
-
-/*
-======================================================================
-End sidebar styles
-======================================================================
-*/
 
 /*
 ======================================================================
@@ -106,12 +40,12 @@ Start topbar styles
 */
 
 .topbar {
-    padding-left: 250px;
+    padding-left: 10%;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px;
+    height: 70px;
     bottom: 0;
     background-color: white;
     -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
@@ -119,27 +53,38 @@ Start topbar styles
     z-index: 1000;
 }
 
-.topbar .header {
-    height: 100%;
-    margin: 0;
-    padding-top: 22px;
-    -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    color: #333333;
-    font-size: 40px;
-    letter-spacing: -2px;
-    text-align: center;
-    text-transform: capitalize;
+.logo {
+    box-sizing: border-box;
+    height: 70px;
+    display: block;
+    float: left;
+    position: relative;
+    padding: 15px 25px 15px 25px;
 }
 
-.topbar .title {
-    color: #58ade3;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: Tahoma;
-    letter-spacing: -2px;
-    text-align: center;
-    text-transform: capitalize;
+.navbar {
+    display: block;
+    float: left;
+    position: relative;
+    padding: 25px;
+}
+
+.navbar .navbar-list-el {
+    float: left;
+    padding: 0 25px 0 25px;
+}
+
+.navbar .navbar-item {
+    font-family: Tahoma, sans-serif;
+    color: black;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.navbar .navbar-item:hover {
+    color: #145D8A;
+    cursor: pointer;
 }
 
 /*
@@ -154,47 +99,58 @@ Start content styles
 ======================================================================
 */
 
-.page-wrap {
-    padding-left: 250px;
-    width: 100%;
+#content {
+    padding-top: 70px;
 }
 
-#content {
-    padding-top: 90px;
+.content-title-bar {
+    padding-top: 50px;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
 }
 
 .content-title {
-    overflow: hidden;
-    margin: 50px auto 0 auto;
-    max-width: 1200px;
     font-size: 60px;
     font-family: Tahoma;
     text-align: center;
 }
 
 .content-body {
-    max-width: 555px;
+    max-width: 800px;
 }
 
-textarea {
-    max-width: 555px;
-    width: 100%;
-    max-height: 300px;
-    height: 150px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+#home .content-title-bar {
+    /*background-color: #2D2D2D;*/
+    background-color: #145D8A;
+    color: white;
 }
+
+#home .content-title {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+}
+
+#home .content-subtitle {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    color: white;
+    padding-bottom: 20px;
+}
+
+
+/*
+======================================================================
+End topbar styles
+======================================================================
+*/
+
+/*
+======================================================================
+Start form styles
+======================================================================
+*/
 
 label {
     display: block;
@@ -220,13 +176,33 @@ input {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+textarea {
+    width: 100%;
+    max-height: 300px;
+    height: 150px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
 .btn-primary {
+    float: right;
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
 }
 
-.btn-priamry:hover {
+.btn-primary:hover {
     color: #fff;
     background-color: #286090;
     border-color: #204d74;
@@ -234,10 +210,10 @@ input {
 
 button {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 8px 14px;
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.42857143;
     text-align: center;
     white-space: nowrap;
@@ -254,12 +230,34 @@ button {
     border-radius: 4px;
 }
 
+.error, .feedback {
+    height: 20px;
+}
+
 .error {
     color: red;
 }
 
 /*
 ======================================================================
-End topbar styles
+End form styles
+======================================================================
+*/
+
+/*
+======================================================================
+Start footer styles
+======================================================================
+*/
+
+.footer {
+    margin-top: 200px;
+    height: 50px;
+    background-color: black;
+}
+
+/*
+======================================================================
+End footer styles
 ======================================================================
 */

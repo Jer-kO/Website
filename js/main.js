@@ -2,8 +2,8 @@
 
     var Main = Backbone.View.extend({
         initialize: function () {
-            this.sidebar = new Sidebar({
-                el: $('.sidebar'),
+            this.sidebar = new Navbar({
+                el: $('.navbar'),
                 parentView: this
             });
 
@@ -20,9 +20,9 @@
 
     });
 
-    var Sidebar = Backbone.View.extend({
+    var Navbar = Backbone.View.extend({
         events: {
-            'click .sidebar-list-el': 'clickHandle'
+            'click .navbar-list-el': 'clickHandle'
         },
 
         initialize: function (options) {
@@ -43,13 +43,13 @@
 
         initialize: function () {
             this.tmpl_cache = {};
-            var renderedHtml = this.fetchTemplate('1', {});
+            var renderedHtml = this.fetchTemplate('home', {});
             this.$el.append(renderedHtml);
         },
 
         fetchTemplate: function (tmpl_name, tmpl_data) {
             if (!this.tmpl_cache[tmpl_name]) {
-                var tmpl_url = 'template' + tmpl_name + '.html';
+                var tmpl_url = tmpl_name + '.html';
 
                 var tmpl_string;
                 $.ajax({
@@ -70,11 +70,12 @@
             this.$el.empty();
             var renderedHtml = this.fetchTemplate(template, {});
             this.$el.append(renderedHtml);
-            this.$el.slideDown({
-                duration: 400,
-                easing: 'linear'
-            })
-            if (template === '3') {
+            // this.$el.slideDown({
+            //     duration: 400,
+            //     easing: 'linear'
+            // });
+            this.$el.show();
+            if (template === 'contact') {
                 $('#contact-us').on('click', {view: this}, this.validateContactForm);
             }
         },
