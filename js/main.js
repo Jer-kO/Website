@@ -188,16 +188,21 @@
     
     $(document).ready(function () {
         var main = new Main({el: $('#container')});
+        $(window).trigger('resize');
     });
 
     $(window).bind('resize', function () {
         var width = $(window).width();
         var navbar = $('#navbar');
+        var hamburger = $('#hamburger');
+
         if (width < 1100) {
             navbar.hide();
+            hamburger.show();
         } else {
             navbar.show();
+            hamburger.hide();
         }
-    }).trigger('resize');
+    });
     
 })(jQuery);
