@@ -95,6 +95,94 @@ End topbar styles
 
 /*
 ======================================================================
+Start hamburger styles
+======================================================================
+*/
+
+.hamburger {
+    float: right;
+    padding: 25px;
+    display: block;
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    z-index: 1002;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.top-bun, .patty, .bottom-bun {
+    background: black;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    width: 28px;
+    height: 4px;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.bottom-bun {
+    margin-bottom: 0px;
+}
+
+.dropdown {
+    position: absolute;
+    left: -90px;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown li .dropdown-item {
+    display: block;
+    padding: 8px 20px;
+    font-size: 18px;
+    clear: both;
+    font-weight: 700;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    text-align: right;
+    font-family: Tahoma;
+}
+
+.dropdown li .dropdown-item:hover {
+    background-color: #EAEAEA;
+}
+
+/*
+======================================================================
+End hamburger styles
+======================================================================
+*/
+
+/*
+======================================================================
 Start content styles
 ======================================================================
 */

@@ -16,7 +16,7 @@
                 <div class="logo">
                     <img width="240" height="40" src="img/codingEdge_logo.jpg" />
                 </div>
-                <div class="navbar">
+                <div class="navbar" id="navbar">
                     <div class="navbar-list-el" data-template="home">
                         <div class="navbar-item" >Home</div>
                     </div>
@@ -29,6 +29,17 @@
                     <div class="navbar-list-el" data-template="register">
                         <div class="navbar-item" >Register</div>
                     </div>
+                </div>
+                <div class="hamburger">
+                    <div class="top-bun"></div>
+                    <div class="patty"></div>
+                    <div class="bottom-bun"></div>
+                    <ul class="dropdown" style="display: none;">
+                        <li><div class="dropdown-item" data-template="home">Home</div></li>
+                        <li><div class="dropdown-item" data-template="about">About Us</div></li>
+                        <li><div class="dropdown-item" data-template="contact">Contact</div></li>
+                        <li><div class="dropdown-item" data-template="register">Register</div></li>
+                    </ul>
                 </div>
             </div>
             <div id="content" class="centered"></div>

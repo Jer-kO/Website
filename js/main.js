@@ -2,8 +2,13 @@
 
     var Main = Backbone.View.extend({
         initialize: function () {
-            this.sidebar = new Navbar({
+            this.navbar = new Navbar({
                 el: $('.navbar'),
+                parentView: this
+            });
+
+            this.hamburger = new Hamburger({
+                el: $('.hamburger'),
                 parentView: this
             });
 
@@ -17,19 +22,57 @@
         changeContent: function (template) {
             this.content.renderTemplate(template);
         }
-
     });
 
     var Navbar = Backbone.View.extend({
         events: {
-            'click .navbar-list-el': 'clickHandle'
+            'click .navbar-list-el': 'navClick'
         },
 
         initialize: function (options) {
             this.parentView = options.parentView;
         },
 
-        clickHandle: function (e) {
+        navClick: function (e) {
+            var item = $(e.currentTarget);
+            var template = item.attr('data-template');
+            this.parentView.trigger('changeContent', template);
+        }
+    });
+
+    var Hamburger = Backbone.View.extend({
+        events: {
+            'click .dropdown-item': 'dropdownClick'
+        },
+
+        initialize: function (options) {
+            this.parentView = options.parentView;
+            this.$el.bind('click', {view: this}, this.toggleDropdown);
+            this.$el.hover(this.inHover, this.outHover);
+        },
+
+        inHover: function (e) {
+            $(e.currentTarget).find('.patty').animate({
+                marginBottom: '6px',
+                marginTop: '6px'
+            }, 100);
+        },
+
+        outHover: function (e) {
+            $(e.currentTarget).find('.patty').animate({
+                marginBottom: '4px',
+                marginTop: '4px'
+            }, 100);
+            $(e.currentTarget).find('.dropdown').hide();
+        },
+
+        toggleDropdown: function (e) {
+            var view = e.data.view;
+            var dropdown = view.$el.find('.dropdown');
+            dropdown.toggle();
+        },
+
+        dropdownClick: function (e) {
             var item = $(e.currentTarget);
             var template = item.attr('data-template');
             this.parentView.trigger('changeContent', template);
@@ -132,5 +175,15 @@
     $(document).ready(function () {
         var main = new Main({el: $('#container')});
     });
+
+    $(window).bind('resize', function () {
+        var width = $(window).width();
+        var navbar = $('#navbar');
+        if (width < 1100) {
+            navbar.hide();
+        } else {
+            navbar.show();
+        }
+    }).trigger('resize');
     
 })(jQuery);
