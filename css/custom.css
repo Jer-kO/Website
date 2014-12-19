@@ -17,6 +17,10 @@ body {
     margin: 0px;
 }
 
+form {
+    margin-top: 10px;
+}
+
 div {
     display: block;
 }
@@ -227,6 +231,25 @@ Start content styles
     padding-bottom: 20px;
 }
 
+#contact .content-title-bar {
+    /*background-color: #2D2D2D;*/
+    background-color: #145D8A;
+    color: white;
+}
+
+#contact .content-title {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+}
+
+#contact .content-subtitle {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    color: white;
+    padding-bottom: 20px;
+}
 
 /*
 ======================================================================
@@ -296,6 +319,13 @@ textarea {
     border-color: #204d74;
 }
 
+.btn-primary.disabled {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+    cursor: wait;
+}
+
 button {
     display: inline-block;
     padding: 8px 14px;
@@ -324,6 +354,11 @@ button {
 
 .error {
     color: red;
+}
+
+.spinner {
+    float: right;
+    margin: 3.5px 5px 3.5px 5px;
 }
 
 /*

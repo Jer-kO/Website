@@ -147,6 +147,12 @@
         },
 
         sendEmail: function (view) {
+            var spinner = view.$el.find('.spinner');
+            spinner.show();
+            var submitBtn = $('#contact-us');
+            submitBtn.addClass('disabled');
+            submitBtn.attr('disabled', 'disabled');
+
             var fields = view.$el.find('input, textarea');
             var data = fields.serialize();
             $.ajax({
@@ -154,6 +160,10 @@
                 data: data,
                 method: 'POST',
                 success: function (data, status, xhr) {
+                    spinner.hide();
+                    submitBtn.removeClass('disabled');
+                    submitBtn.removeAttr('disabled');
+
                     var feedbackEl = $('.feedback');
                     feedbackEl.empty();
                     feedbackEl.append('Your message has been sent.  Thank you for your feedback');
@@ -164,6 +174,10 @@
                     }
                 },
                 error: function (xhr, status, error) {
+                    spinner.hide();
+                    submitBtn.removeClass('disabled');
+                    submitBtn.removeAttr('disabled');
+
                     var errorEl = $('.error');
                     errorEl.empty();
                     errorEl.append('An unexpected error has occured.  Please try again later.');
