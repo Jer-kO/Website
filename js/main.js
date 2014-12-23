@@ -196,7 +196,7 @@
         var navbar = $('#navbar');
         var hamburger = $('#hamburger');
 
-        if (width < 1100) {
+        if (width < 1020) {
             navbar.hide();
             hamburger.show();
         } else {

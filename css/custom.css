@@ -64,7 +64,7 @@ Start topbar styles
     display: block;
     float: left;
     position: relative;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 25px 15px 0;
 }
 
 .navbar {
@@ -198,8 +198,8 @@ Start content styles
 
 .content-title-bar {
     padding-top: 50px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
     overflow: hidden;
     margin: 0 auto 0 auto;
     background-color: #145D8A;
@@ -225,9 +225,9 @@ Start content styles
 }
 
 .content-body {
-    margin-top: 15px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-top: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .content-wrap {
