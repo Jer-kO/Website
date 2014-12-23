@@ -2,29 +2,31 @@
     <div class="content-title-bar">
         <div class="content-title">Contact</div>
         <p class="content-subtitle">
-            Send us some feedback.
+            Send us some feedback, or email us directly at hash.coding.edge@gmail.com.
         </p>
     </div>
-    <div class="content-body centered">
-        <form method="post">
-            <div>
-                <label>Name:</label>
-                <input type="text" name="name" />
-            </div>
-            <div>
-                <label>Email:</label>
-                <input type="text" name="email" />
-            </div>
-            <div>
-                <label>Message:</label>
-                <textarea name="message" style="resize: none;"></textarea>
-            </div>
-            <div>
-                <button class="btn-primary" id="contact-us" type="submit" value="Send Feedback">Send Feedback</button>
-                <img class="spinner" width="31" height="31" src="img/spinner.gif" style="display: none;" />
-            </div>
-        </form>
-        <div class="feedback"></div>
-        <div class="error"></div>
+    <div class="content-body">
+        <div class="content-wrap">
+            <form method="post">
+                <div class="form-section">
+                    <label>Name:</label>
+                    <input type="text" name="name" />
+                </div>
+                <div class="form-section">
+                    <label>Email:</label>
+                    <input type="text" name="email" />
+                </div>
+                <div class="form-section">
+                    <label>Message:</label>
+                    <textarea name="message" style="resize: none;"></textarea>
+                </div>
+                <div class="form-section">
+                    <button class="btn-primary" id="contact-us" type="submit" value="Send Feedback">Send Feedback</button>
+                    <img class="spinner" width="31" height="31" src="img/spinner.gif" style="display: none;" />
+                </div>
+            </form>
+            <div class="feedback"></div>
+            <div class="error"></div>
+        </div>
     </div>
 </div>
