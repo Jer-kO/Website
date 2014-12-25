@@ -34,6 +34,7 @@ var Connect4 = Backbone.View.extend({
             var move = this.board.addToColumn(col, this.currentPlayer);
             if (move !== -1) {
                 // Valid move
+                this.message.empty();
                 this.board.drawBoard();
                 this.turnNumber = this.turnNumber + 1;
                 this.checkGameDraw();
@@ -92,7 +93,7 @@ var Board = Backbone.View.extend({
     },
 
     drawBoard: function () {
-        var str = '';
+        var str = '  0    1    2    3    4    5    6\n';
         for (var y = this.height - 1; y >= 0; y--) {
             for (var x = 0; x < this.width; x++) {
                 str = str.concat('| ');
