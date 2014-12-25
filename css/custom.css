@@ -251,18 +251,23 @@ Start Home page styles
 .panel {
     height: 80px;
     background-color: #EAEAEA;
-    border-bottom: 3px solid #C8C8C8;
+    border-bottom: 2px solid #C8C8C8;
     cursor: pointer;
     padding-left: 10%;
     padding-right: 10%;
     margin: 0 auto 0 auto;
 }
 
+.panel:hover {
+    background-color: #E2E2E2;
+}
+
 .panel.panel-first {
-    border-top: 3px solid #C8C8C8;
+    border-top: 2px solid #C8C8C8;
 }
 
 .panel.panel-open {
+    background-color: #D5D5D5;
     border-bottom: none;
 }
 
@@ -278,7 +283,8 @@ Start Home page styles
     height: 80px;
     color: black;
     font-size: 25px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: klavika, helvetica, arial, sans-serif;
+    text-transform: uppercase;
 }
 
 .panel-icon {
@@ -353,7 +359,6 @@ Start form styles
 
 label {
     display: block;
-    font-weight: 700;
 }
 
 input {
@@ -397,14 +402,14 @@ input:focus, textarea:focus {
 .btn-primary {
     float: right;
     color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+    background-color: #337AB7;
+    border-color: #2E6DA4;
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: #286090;
-    border-color: #204d74;
+    border-color: #204D74;
 }
 
 .btn-primary.disabled {
@@ -412,6 +417,10 @@ input:focus, textarea:focus {
     background-color: #286090;
     border-color: #204d74;
     cursor: wait;
+}
+
+.btn-primary:focus {
+    outline: none;
 }
 
 button {
@@ -457,12 +466,55 @@ End form styles
 
 /*
 ======================================================================
+Start connect4 styles
+======================================================================
+*/
+
+.connect4-app {
+    padding-bottom: 100px;
+}
+
+.connect4-app .board {
+    max-height: 250px;
+    height: 250px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.connect4-app .btn-primary {
+    float: none;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    background-color: #C9302C;
+    border-color: #AC2925;
+}
+
+.connect4-app .btn-primary:hover {
+    background-color: #D9534F;
+    border-color: #D43F3A;
+}
+
+.connect4-app .game-message {
+    height: 24px;
+}
+
+/*
+======================================================================
+End connect4 styles
+======================================================================
+*/
+
+/*
+======================================================================
 Start footer styles
 ======================================================================
 */
 
+#about, #contact, #register {
+    margin-bottom: 200px;
+}
+
 .footer {
-    margin-top: 200px;
+    /*margin-top: 200px;*/
     height: 50px;
     background-color: black;
 }

@@ -157,6 +157,12 @@
                     easing: 'linear',
                     duration: 200
                 });
+
+                if (panelContent.hasClass('connect4-app')) {
+                    var connect4 = new Connect4({
+                        el: panelContent
+                    });
+                }
             }
         }
     });
