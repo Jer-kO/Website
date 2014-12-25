@@ -118,18 +118,60 @@
             this.$el.append(renderedHtml);
             this.$el.show();
             if (template === 'contact') {
-                $('#contact-us').on('click', {view: this}, this.validateContactForm);
+                var contactPage = new ContactPage({
+                    el: $('#contact')
+                });
             }
             if (template === 'home') {
-                var homepage = new HomePage({
+                var homePage = new HomePage({
                     el: $('#home')
                 });
             }
+        }
+    });
+
+    var HomePage = Backbone.View.extend({
+        events: {
+            'click .panel': 'panelClick'
+        },
+
+        initialize: function (options) {
+        },
+
+        panelClick: function (e) {
+            e.preventDefault();
+            var panel = $(e.currentTarget);
+            var panelContent = panel.next('.panel-content');
+
+            if (panel.hasClass('panel-open')) {
+                panelContent.slideUp({
+                    easing: 'linear',
+                    duration: 200,
+                    complete: function () {
+                        panel.toggleClass('panel-open');
+                    }
+                });
+            } else {
+                panel.toggleClass('panel-open');
+                panelContent.slideDown({
+                    easing: 'linear',
+                    duration: 200
+                });
+            }
+        }
+    });
+
+    var ContactPage = Backbone.View.extend({
+        events: {
+            'click #contact-us': 'validateContactForm'
+        },
+
+        initialize: function (options) {
         },
 
         validateContactForm: function (e) {
             e.preventDefault();
-            var view = e.data.view;
+            var view = this;
 
             var errorEl = $('.error');
             errorEl.empty();
@@ -146,7 +188,7 @@
             });
 
             if (!hasError) {
-                view.sendEmail(view);
+                this.sendEmail(view);
             }
         },
 
@@ -187,37 +229,6 @@
                     errorEl.append('An unexpected error has occured.  Please try again later.');
                 }
             });
-        }
-    });
-
-    var HomePage = Backbone.View.extend({
-        events: {
-            'click .panel': 'panelClick'
-        },
-
-        initialize: function (options) {
-        },
-
-        panelClick: function (e) {
-            e.preventDefault();
-            var panel = $(e.currentTarget);
-            var panelContent = panel.next('.panel-content');
-
-            if (panel.hasClass('panel-open')) {
-                panelContent.slideUp({
-                    easing: 'linear',
-                    duration: 200,
-                    complete: function () {
-                        panel.toggleClass('panel-open');
-                    }
-                });
-            } else {
-                panel.toggleClass('panel-open');
-                panelContent.slideDown({
-                    easing: 'linear',
-                    duration: 200
-                });
-            }
         }
     });
     
