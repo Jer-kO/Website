@@ -88,6 +88,9 @@
             this.tmpl_cache = {};
             var renderedHtml = this.fetchTemplate('home', {});
             this.$el.append(renderedHtml);
+            var homepage = new HomePage({
+                el: $('#home')
+            });
         },
 
         fetchTemplate: function (tmpl_name, tmpl_data) {
@@ -113,13 +116,14 @@
             this.$el.empty();
             var renderedHtml = this.fetchTemplate(template, {});
             this.$el.append(renderedHtml);
-            // this.$el.slideDown({
-            //     duration: 400,
-            //     easing: 'linear'
-            // });
             this.$el.show();
             if (template === 'contact') {
                 $('#contact-us').on('click', {view: this}, this.validateContactForm);
+            }
+            if (template === 'home') {
+                var homepage = new HomePage({
+                    el: $('#home')
+                });
             }
         },
 
@@ -183,6 +187,37 @@
                     errorEl.append('An unexpected error has occured.  Please try again later.');
                 }
             });
+        }
+    });
+
+    var HomePage = Backbone.View.extend({
+        events: {
+            'click .panel': 'panelClick'
+        },
+
+        initialize: function (options) {
+        },
+
+        panelClick: function (e) {
+            e.preventDefault();
+            var panel = $(e.currentTarget);
+            var panelContent = panel.next('.panel-content');
+
+            if (panel.hasClass('panel-open')) {
+                panelContent.slideUp({
+                    easing: 'linear',
+                    duration: 200,
+                    complete: function () {
+                        panel.toggleClass('panel-open');
+                    }
+                });
+            } else {
+                panel.toggleClass('panel-open');
+                panelContent.slideDown({
+                    easing: 'linear',
+                    duration: 200
+                });
+            }
         }
     });
     

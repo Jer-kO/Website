@@ -225,7 +225,6 @@ Start content styles
 }
 
 .content-body {
-    padding-top: 15px;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -240,6 +239,71 @@ Start content styles
 /*
 ======================================================================
 End topbar styles
+======================================================================
+*/
+
+/*
+======================================================================
+Start Home page styles
+======================================================================
+*/
+
+.panel {
+    height: 80px;
+    background-color: #EAEAEA;
+    border-bottom: 3px solid #C8C8C8;
+    cursor: pointer;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto 0 auto;
+}
+
+.panel.panel-first {
+    border-top: 3px solid #C8C8C8;
+}
+
+.panel.panel-open {
+    border-bottom: none;
+}
+
+.panel-wrap {
+    clear: both;
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+}
+
+.panel-title {
+    line-height: 80px;
+    text-align: left;
+    height: 80px;
+    color: black;
+    font-size: 25px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.panel-icon {
+    float: right;
+    font-weight: 900;
+    font-family: Lucida Console;
+    font-size: 50px;
+    line-height: 80px;
+    display: inline-block;
+}
+
+.panel-content {
+    clear: both;
+    padding: 20px 0 20px 0;
+    color: white;
+    border-top: 5px solid #25657B;
+    background-color: #2F7D9C;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto 0 auto;
+}
+
+/*
+======================================================================
+End Home page styles
 ======================================================================
 */
 
