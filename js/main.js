@@ -131,39 +131,12 @@
     });
 
     var HomePage = Backbone.View.extend({
-        events: {
-            'click .panel': 'panelClick'
-        },
 
         initialize: function (options) {
-        },
-
-        panelClick: function (e) {
-            e.preventDefault();
-            var panel = $(e.currentTarget);
-            var panelContent = panel.next('.panel-content');
-
-            if (panel.hasClass('panel-open')) {
-                panelContent.slideUp({
-                    easing: 'linear',
-                    duration: 200,
-                    complete: function () {
-                        panel.toggleClass('panel-open');
-                    }
-                });
-            } else {
-                panel.toggleClass('panel-open');
-                panelContent.slideDown({
-                    easing: 'linear',
-                    duration: 200
-                });
-
-                if (panelContent.hasClass('connect4-app')) {
-                    var connect4 = new Connect4({
-                        el: panelContent
-                    });
-                }
-            }
+            var panelContent = this.$el.find('.connect4-app');
+            var connect4 = new Connect4({
+                el: panelContent
+            });
         }
     });
 
