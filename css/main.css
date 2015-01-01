@@ -575,15 +575,13 @@ Start connect4 styles
 .connect4-app {
   padding-bottom: 100px;
 }
-
-/* line 515, ../sass/main.scss */
+/* line 514, ../sass/main.scss */
 .connect4-app .board {
   max-height: 250px;
   height: 250px;
   font-family: "Lucida Console", Monaco, monospace;
 }
-
-/* line 521, ../sass/main.scss */
+/* line 520, ../sass/main.scss */
 .connect4-app .btn-primary {
   float: none;
   display: inline-block;
@@ -591,14 +589,12 @@ Start connect4 styles
   background-color: #C9302C;
   border-color: #AC2925;
 }
-
-/* line 529, ../sass/main.scss */
+/* line 526, ../sass/main.scss */
 .connect4-app .btn-primary:hover {
   background-color: #D9534F;
   border-color: #D43F3A;
 }
-
-/* line 534, ../sass/main.scss */
+/* line 532, ../sass/main.scss */
 .connect4-app .game-message {
   height: 24px;
 }
@@ -613,12 +609,12 @@ End connect4 styles
 Start footer styles
 ======================================================================
 */
-/* line 550, ../sass/main.scss */
+/* line 549, ../sass/main.scss */
 #about, #contact, #register {
   margin-bottom: 200px;
 }
 
-/* line 554, ../sass/main.scss */
+/* line 553, ../sass/main.scss */
 .footer {
   height: 50px;
   background-color: black;
