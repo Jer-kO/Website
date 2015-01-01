@@ -191,7 +191,78 @@
 
                     var feedbackEl = $('.feedback');
                     feedbackEl.empty();
-                    feedbackEl.append('Your message has been sent.  Thank you for your feedback');
+                    feedbackEl.append('Your message has been sent.  Thank you for your feedback.');
+                    for (var i = 0; i < fields.length; i++) {
+                        if ($(fields[i]).attr('type') !== 'submit') {
+                            $(fields[i]).val('');
+                        }
+                    }
+                },
+                error: function (xhr, status, error) {
+                    spinner.hide();
+                    submitBtn.removeClass('disabled');
+                    submitBtn.removeAttr('disabled');
+
+                    var errorEl = $('.error');
+                    errorEl.empty();
+                    errorEl.append('An unexpected error has occured.  Please try again later.');
+                }
+            });
+        }
+    });
+
+    var RegisterPage = Backbone.View.extend({
+        events: {
+            'click #register': 'validateRegisterForm'
+        },
+
+        initialize: function (options) {
+        },
+
+        validateRegisterForm: function (e) {
+            e.preventDefault();
+            var view = this;
+
+            var errorEl = $('.error');
+            errorEl.empty();
+
+            var hasError = false;
+            _.each(['class', 'email', 'name'], function (field) {
+                var fieldEl = view.$el.find('[name="' + field + '"]');
+                if (fieldEl.val && $.trim(fieldEl.val()) === '') {
+                    errorEl.empty();
+                    errorEl.append('The ' + field + ' field cannot be blank.');
+                    hasError = true;
+                    fieldEl.click();
+                }
+            });
+
+            if (!hasError) {
+                this.sendRegistration(view);
+            }
+        },
+
+        sendRegistration: function (view) {
+            var spinner = view.$el.find('.spinner');
+            spinner.show();
+            var submitBtn = $('#register');
+            submitBtn.addClass('disabled');
+            submitBtn.attr('disabled', 'disabled');
+
+            var fields = view.$el.find('input, textarea');
+            var data = fields.serialize();
+            $.ajax({
+                url: 'php/Register.php',
+                data: data,
+                method: 'POST',
+                success: function (data, status, xhr) {
+                    spinner.hide();
+                    submitBtn.removeClass('disabled');
+                    submitBtn.removeAttr('disabled');
+
+                    var feedbackEl = $('.feedback');
+                    feedbackEl.empty();
+                    feedbackEl.append('Your registration has been received.');
                     for (var i = 0; i < fields.length; i++) {
                         if ($(fields[i]).attr('type') !== 'submit') {
                             $(fields[i]).val('');

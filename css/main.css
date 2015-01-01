@@ -531,22 +531,59 @@ End form styles
 */
 /*
 ======================================================================
-Start connect4 styles
+Start table styles
 ======================================================================
 */
 /* line 475, ../sass/main.scss */
+table {
+  margin: 30px 20px 30px 20px;
+  width: 100%;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* line 483, ../sass/main.scss */
+table > tbody > tr > td, table > tbody > tr > th {
+  text-align: left;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+/* line 491, ../sass/main.scss */
+table > thead > tr > th {
+  text-align: left;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+/*
+======================================================================
+End table styles
+======================================================================
+*/
+/*
+======================================================================
+Start connect4 styles
+======================================================================
+*/
+/* line 511, ../sass/main.scss */
 .connect4-app {
   padding-bottom: 100px;
 }
 
-/* line 479, ../sass/main.scss */
+/* line 515, ../sass/main.scss */
 .connect4-app .board {
   max-height: 250px;
   height: 250px;
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-/* line 485, ../sass/main.scss */
+/* line 521, ../sass/main.scss */
 .connect4-app .btn-primary {
   float: none;
   display: inline-block;
@@ -555,13 +592,13 @@ Start connect4 styles
   border-color: #AC2925;
 }
 
-/* line 493, ../sass/main.scss */
+/* line 529, ../sass/main.scss */
 .connect4-app .btn-primary:hover {
   background-color: #D9534F;
   border-color: #D43F3A;
 }
 
-/* line 498, ../sass/main.scss */
+/* line 534, ../sass/main.scss */
 .connect4-app .game-message {
   height: 24px;
 }
@@ -576,12 +613,12 @@ End connect4 styles
 Start footer styles
 ======================================================================
 */
-/* line 514, ../sass/main.scss */
+/* line 550, ../sass/main.scss */
 #about, #contact, #register {
   margin-bottom: 200px;
 }
 
-/* line 518, ../sass/main.scss */
+/* line 554, ../sass/main.scss */
 .footer {
   height: 50px;
   background-color: black;

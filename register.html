@@ -7,7 +7,29 @@
     </div>
     <div class="content-body">
         <div class="content-wrap">
-            <form action="php/test.php" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Class</th>
+                        <th>Start / End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Beginner Java Class</td>
+                        <td>N/A</d>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beginner Java Class</td>
+                        <td>N/A</d>
+                    </tr>
+                </tbody>
+            </table>
+            <form method="post">
+                <div class="segment-header">Registration Form</div>
                 <div class="form-section">
                     <label>Name:</label>
                     <input type="text" name="name" />
@@ -17,11 +39,11 @@
                     <input type="text" name="email" />
                 </div>
                 <div class="form-section">
-                    <label>Message:</label>
-                    <textarea name="message" style="resize: none;"></textarea>
+                    <label>Class ID#:</label>
+                    <input type="text" name="class" />
                 </div>
                 <div class="form-section">
-                    <button class="btn-primary" id="contact-us" type="submit" value="Send Feedback">Send Feedback</button>
+                    <button class="btn-primary" id="register" type="submit" value="Register for Class">Register</button>
                     <img class="spinner" width="31" height="31" src="img/spinner.gif" style="display: none;" />
                 </div>
             </form>
