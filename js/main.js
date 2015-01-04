@@ -80,10 +80,6 @@
     });
 
     var Content = Backbone.View.extend({
-        events: {
-            'click #contact-us': 'send-email'
-        },
-
         initialize: function () {
             this.tmpl_cache = {};
             var renderedHtml = this.fetchTemplate('home', {});
