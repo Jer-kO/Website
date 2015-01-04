@@ -19,6 +19,13 @@ var Connect4 = Backbone.View.extend({
         this.playerInput = this.$el.find('.player-input');
         this.playerInput.val('');
         this.playerInput.attr('placeholder', 'Player 1\'s turn to move.');
+        this.playerInput.off();
+        this.playerInput.on('keypress', {game: this}, function (e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                e.data.game.playerMove();
+            }
+        });
         this.message = this.$el.find('.game-message');
         this.message.empty();
 
@@ -41,6 +48,7 @@ var Connect4 = Backbone.View.extend({
                 this.checkGameWon(col, move);
                 (this.currentPlayer === 1) ? this.currentPlayer = 2 : this.currentPlayer = 1;
                 this.playerInput.val('');
+                this.playerInput.select();
                 this.playerInput.attr('placeholder', 'Player ' + this.currentPlayer + '\'s turn to move.');
             } else {
                 this.message.empty();
