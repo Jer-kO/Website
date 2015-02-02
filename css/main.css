@@ -1,6 +1,6 @@
-/* line 72, icon/*.png */
-.icon-sprite, .icon-computer, .icon-gear, .icon-logo, .icon-report {
-  background-image: url('/img/icon-s9104502476.png');
+/* line 96, icon/*.png */
+.icon-sprite, .icon-computer, .icon-gear, .icon-jeremy, .icon-justin, .icon-logo, .icon-report, .icon-william {
+  background-image: url('/img/icon-s642d54cb5f.png');
   background-repeat: no-repeat;
 }
 
@@ -19,17 +19,38 @@
 }
 
 /* line 84, ../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-logo {
+.icon-jeremy {
   background-position: 0 -180px;
+  height: 200px;
+  width: 150px;
+}
+
+/* line 84, ../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-justin {
+  background-position: 0 -380px;
+  height: 200px;
+  width: 150px;
+}
+
+/* line 84, ../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-logo {
+  background-position: 0 -580px;
   height: 40px;
   width: 240px;
 }
 
 /* line 84, ../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-report {
-  background-position: 0 -220px;
+  background-position: 0 -620px;
   height: 90px;
   width: 90px;
+}
+
+/* line 84, ../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-william {
+  background-position: 0 -710px;
+  height: 200px;
+  width: 150px;
 }
 
 /* line 7, ../sass/main.scss */
@@ -282,7 +303,7 @@ Start content styles
   margin: 0 auto 0 auto;
   text-align: left;
   color: white;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   font-size: 20px;
 }
 
@@ -382,15 +403,15 @@ Start about page styles
 
 /* line 328, ../sass/main.scss */
 .profile-graphic {
+  margin-top: 10px;
   display: block;
   float: left;
-  width: 140px;
 }
 
 /* line 334, ../sass/main.scss */
 .profile-info {
   display: block;
-  margin-left: 160px;
+  margin-left: 170px;
 }
 
 /* line 339, ../sass/main.scss */
