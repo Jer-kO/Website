@@ -118,6 +118,11 @@
                     el: $('#contact')
                 });
             }
+            if (template === 'register') {
+                var registerPage = new RegisterPage({
+                    el: $('#register')
+                });
+            }
             if (template === 'home') {
                 var homePage = new HomePage({
                     el: $('#home')
@@ -209,10 +214,11 @@
 
     var RegisterPage = Backbone.View.extend({
         events: {
-            'click #register': 'validateRegisterForm'
+            'click #registerSubmit': 'validateRegisterForm'
         },
 
         initialize: function (options) {
+            console.log('init registration');
         },
 
         validateRegisterForm: function (e) {
@@ -241,7 +247,7 @@
         sendRegistration: function (view) {
             var spinner = view.$el.find('.spinner');
             spinner.show();
-            var submitBtn = $('#register');
+            var submitBtn = $('#registerSubmit');
             submitBtn.addClass('disabled');
             submitBtn.attr('disabled', 'disabled');
 

@@ -5,6 +5,11 @@
     $name = $_POST["name"];
     $name = ($name ? $name : 'No name');
     $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $experience = $_POST["experience"];
+    $guard_name = $_POST["guard_name"];
+    $guard_email = $_POST["guard_email"];
+    $guard_phone = $_POST["guard_phone"];
     $class = $_POST["class"];
 
     $mail->SMTPDebug = 3;
@@ -24,7 +29,11 @@
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = "Student Registration";
-    $mail->Body    = "Name: $name\n<br>Email: $email\n<br>Class ID: $class";
+    $body = "Student Information:\n<br>Name: $name\n<br>Email: $email\n<br>Phone: $phone\n<br>Past Experience: $experience\n<br>";
+    $body .= "Guardian information:\n<br>Name: $guard_name\n<br>Email: $guard_email\n<br>Phone: $phone\n<br>";
+    $body .= "Class ID: $class";
+    $mail->Body = $body;
+
 
     if(!$mail->send()) {
         http_response_code(500);
