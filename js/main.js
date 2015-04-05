@@ -229,11 +229,20 @@
             errorEl.empty();
 
             var hasError = false;
-            _.each(['class', 'email', 'name'], function (field) {
+            _.each(['guard_phone', 'guard_email', 'guard_name', 'phone', 'email', 'name'], function (field) {
                 var fieldEl = view.$el.find('[name="' + field + '"]');
                 if (fieldEl.val && $.trim(fieldEl.val()) === '') {
                     errorEl.empty();
-                    errorEl.append('The ' + field + ' field cannot be blank.');
+                    var fieldName;
+                    switch (field) {
+                        case 'name': fieldName = 'student name'; break;
+                        case 'email': fieldName = 'student email'; break;
+                        case 'phone': fieldName = 'student phone'; break;
+                        case 'guard_name': fieldName = 'guardian name'; break;
+                        case 'guard_email': fieldName = 'guardian email'; break;
+                        case 'guard_phone': fieldName = 'guardian phone'; break;
+                    }
+                    errorEl.append('The ' + fieldName + ' field cannot be blank.');
                     hasError = true;
                     fieldEl.click();
                 }

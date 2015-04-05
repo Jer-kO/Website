@@ -2,7 +2,7 @@
     <div class="content-title-bar">
         <div class="content-title">Register</div>
         <p class="content-subtitle">
-            Register now for classes starting early July. Each one of our Java programming classes consists of 5 sessions, each 2 hours long.  By the end you will have a working knowledge of programming and be able to make your own personal projects.
+            Register now for classes starting early July. Each one of our Java programming classes consists of 5 sessions, each 2 hours long.  By the end, you will have a working knowledge of programming and be able to make your own personal projects.
         </p>
     </div>
     <div class="content-body">
@@ -23,43 +23,42 @@
                     </tr>
                 </tbody>
             </table>
-            <!-- <form class="registration-form" method="post"> -->
             <form class="registration-form">
                 <div class="segment-header">Registration Form</div>
                 <div style="padding: 10px 0 10px 0; font-style: italic;">Fields marked with (*) are required.</div>
-                <div style="padding: 10px 0 10px 0; font-weight: bold;">Student Infomration:</div>
+                <div style="padding: 10px 0 10px 0; font-weight: bold;">Student Information:</div>
                 <div style="margin-left: 30px;" class="form-section">
-                    <label>Name:</label>
+                    <label>Name (*):</label>
                     <input type="text" name="name" />
-                    <label>Email:</label>
+                    <label>Email (*):</label>
                     <input type="text" name="email" />
-                    <label>Phone Number:</label>
+                    <label>Phone Number (*):</label>
                     <input type="text" name="phone" />
                     <label>Grade:</label>
                     <input style="width: 70px" type="number" name="grade" />
-                    <label>Past Programming Experience (No experience is welcome):</label>
+                    <label>Past Programming Experience (if any):</label>
                     <textarea name="experience" style="resize: none;"></textarea>
                 </div>
-                <div style="padding: 10px 0 10px 0; font-weight: bold;">Guardian Infomration:</div>
+                <div style="padding: 10px 0 10px 0; font-weight: bold;">Guardian Information:</div>
                 <div style="margin-left: 30px;" class="form-section">
-                    <label>Name:</label>
+                    <label>Name (*):</label>
                     <input type="text" name="guard_name" />
-                    <label>Email:</label>
+                    <label>Email (*):</label>
                     <input type="text" name="guard_email" />
-                    <label>Phone Number:</label>
+                    <label>Phone Number (*):</label>
                     <input type="text" name="guard_phone" />
                 </div>
                 <div class="form-section">
                     <label>Class ID#:</label>
                     <input type="text" name="class" />
                 </div>
+                <div class="feedback"></div>
+                <div class="error"></div>
                 <div style="height: 31px" class="form-section">
                     <button class="btn-primary" id="registerSubmit" type="submit" value="Register for Class">Register</button>
                     <img class="spinner" width="31" height="31" src="img/spinner.gif" style="display: none;" />
                 </div>
             </form>
-            <div class="feedback"></div>
-            <div class="error"></div>
         </div>
     </div>
 </div>
