@@ -111,6 +111,7 @@
             this.$el.hide();
             this.$el.empty();
             var renderedHtml = this.fetchTemplate(template, {});
+            $('body').scrollTop(0);
             this.$el.append(renderedHtml);
             this.$el.show();
             if (template === 'contact') {
