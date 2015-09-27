@@ -215,11 +215,34 @@
 
     var RegisterPage = Backbone.View.extend({
         events: {
-            'click #registerSubmit': 'validateRegisterForm'
+            'click #registerSubmit': 'validateRegisterForm',
+            'click #register-intro': 'showRegisterForm',
+            'click #registerBack': 'showClassList'
         },
 
         initialize: function (options) {
-            console.log('init registration');
+            this.registerForm = $('#register-form');
+            this.introClass = $('#register-intro-form');
+        },
+
+        showRegisterForm: function (e) {
+            e.preventDefault();
+            this.registerForm.show();
+            this.introClass.hide();
+        },
+
+        showClassList: function (e) {
+            e.preventDefault();
+            this.registerForm.hide();
+            this.introClass.show();
+
+            // Clear all fields
+            var fields = this.$el.find('input, textarea');
+            for (var i = 0; i < fields.length; i++) {
+                if ($(fields[i]).attr('type') !== 'submit') {
+                    $(fields[i]).val('');
+                }
+            }
         },
 
         validateRegisterForm: function (e) {

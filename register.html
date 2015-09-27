@@ -5,29 +5,29 @@
             Each one of our Java programming classes consists of 10 sessions, each 1 hour long. By the end, you will have a working knowledge of programming and be able to make your own personal projects.
         </p>
         <p class="content-subtitle">
-            Our first sessions will be held weekly on Tuesdays 5pm-6pm at Richmond High. Attend our first lesson for free to see if programming will be right for you.
+            Attend our first lesson for free to see if programming will be right for you. See below for more information about the classes we currently offer.
         </p>
     </div>
     <div class="content-body">
         <div class="content-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Class</th>
-                        <th>Start / End Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td>Introduction to Programming in Java ($30 / hr)</td>
-                        <td>Jan 19 / Mar 22</d>
-                    </tr>
-                </tbody>
-            </table>
-            <form class="registration-form">
-                <div class="segment-header">Registration Form</div>
+            <div class="class-container" id="register-intro-form">
+                <header>
+                    <h2>Intro To Programming</h2>
+                    <p>Learn the basics of coding in Java. No prior coding experience needed.</p>
+                </header>
+                <ul class="class-features">
+                    <li>Ten one-hour sessions</li>
+                    <li>Jan 19 to Mar 22 / 5-6 pm</li>
+                    <li>Richmond High School</li>
+                </ul>
+                <div class="cta">
+                    <p>Try the first class for free!</p>
+                    <button class="btn-primary" id="register-intro" value="Intro to Programming">Register</button>
+                </div>
+            </div>
+
+            <form class="registration-form" id="register-form" style="display:none">
+                <div class="segment-header">Introduction to Java Programming</div>
                 <div style="padding: 10px 0 10px 0; font-style: italic;">Fields marked with (*) are required.</div>
                 <div style="padding: 10px 0 10px 0; font-weight: bold;">Student Information:</div>
                 <div style="margin-left: 30px;" class="form-section">
@@ -58,6 +58,7 @@
                 <div class="feedback"></div>
                 <div class="error"></div>
                 <div style="height: 31px" class="form-section">
+                    <button class="btn-secondary" id="registerBack" value="Back">Back</button>
                     <button class="btn-primary" id="registerSubmit" type="submit" value="Register for Class">Register</button>
                     <img class="spinner" width="31" height="31" src="img/spinner.gif" style="display: none;" />
                 </div>
