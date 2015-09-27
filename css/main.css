@@ -660,8 +660,7 @@ Start footer styles
 End footer styles
 ======================================================================
 */
-
-
+/* line 570, ../sass/main.scss */
 .cta {
   width: 100%;
   position: absolute;
@@ -670,6 +669,7 @@ End footer styles
   padding-right: 24px;
 }
 
+/* line 578, ../sass/main.scss */
 .class-features {
   padding: 0;
   margin-top: 20px;
@@ -680,6 +680,7 @@ End footer styles
   color: #145D8A;
 }
 
+/* line 588, ../sass/main.scss */
 .class-features li {
   position: relative;
   padding: 10px 0;
@@ -690,6 +691,7 @@ End footer styles
   border-top: 1px solid #e8e8e8;
 }
 
+/* line 598, ../sass/main.scss */
 .class-container {
   margin-top: 30px;
   margin-left: auto;
@@ -702,13 +704,14 @@ End footer styles
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   text-align: center;
-  box-shadow: 0 0 0 2px rgba(8,188,255,0);
+  box-shadow: 0 0 0 2px rgba(8, 188, 255, 0);
   background: white;
   -webkit-transition: 0.1s all linear;
   -moz-transition: 0.1s all linear;
   transition: 0.1s all linear;
 }
 
+/* line 617, ../sass/main.scss */
 .class-container:hover {
   border-color: #66afe9;
   outline: 0;
@@ -716,12 +719,14 @@ End footer styles
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+/* line 624, ../sass/main.scss */
 .class-container h2 {
   color: #145D8A;
   font-size: 18px;
   margin-top: 10px;
 }
 
+/* line 630, ../sass/main.scss */
 .class-container p {
   margin: 8px auto;
   min-height: 4em;
@@ -730,6 +735,7 @@ End footer styles
   color: #888;
 }
 
+/* line 638, ../sass/main.scss */
 .class-container .btn-primary {
   display: block;
   width: 100%;
