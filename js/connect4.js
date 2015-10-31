@@ -27,6 +27,8 @@ var Connect4 = Backbone.View.extend({
             }
         });
         this.message = this.$el.find('.game-message');
+        this.moveBtn = this.$el.find('#player-move');
+        this.setGameOver(false);
         this.message.empty();
 
         this.currentState = this.state.GAME_ACTIVE;
@@ -36,6 +38,9 @@ var Connect4 = Backbone.View.extend({
     },
 
     playerMove: function () {
+        if (this.isOver) {
+            return;
+        }
         var col = parseInt(this.playerInput.val());
         if (col >= 0 && col < this.board.width) {
             var move = this.board.addToColumn(col, this.currentPlayer);
@@ -74,9 +79,21 @@ var Connect4 = Backbone.View.extend({
         if (winner !== 0) {
             this.message.empty();
             this.message.append('Player ' + winner + ' wins!');
+            this.setGameOver(true);
             return true;
         }
         return false;
+    },
+
+    setGameOver: function (over) {
+        this.isOver = over;
+        if (over) {
+            this.moveBtn.addClass('disabled');
+            this.moveBtn.attr('disabled', true);
+        } else {
+            this.moveBtn.removeClass('disabled');
+            this.moveBtn.removeAttr('disabled');
+        }
     }
 });
 

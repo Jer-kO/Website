@@ -417,7 +417,9 @@ input:focus, textarea:focus {
     color: #fff;
     background-color: #286090;
     border-color: #204d74;
-    cursor: wait;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    opacity: .65;
 }
 
 .btn-primary:focus {
