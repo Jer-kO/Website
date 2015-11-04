@@ -35,7 +35,8 @@ p, label {
 
 p, label, div, span {
 /*    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
     letter-spacing: 1px;
 }
 
@@ -92,7 +93,7 @@ Start topbar styles
 }
 
 .navbar .navbar-item {
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
     color: black;
     font-size: 25px;
     line-height: 1;
@@ -186,7 +187,7 @@ Start hamburger styles
     color: #333;
     white-space: nowrap;
     text-align: right;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
 .dropdown li .dropdown-item:hover {
@@ -221,7 +222,7 @@ Start content styles
 
 .content-title {
     font-size: 60px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
     text-align: center;
     max-width: 800px;
     margin: 0 auto 0 auto;
@@ -339,7 +340,7 @@ Start about page styles
 .profile-info h1 {
     margin: 0 0 5px 0;
     color: black;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
 .profile-info p {
@@ -425,6 +426,21 @@ input:focus, textarea:focus {
 .btn-primary:focus {
     outline: none;
 }
+
+.btn-xs {
+  float: none;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-block {
+  float: none;
+  display: block;
+  width: 100%;
+}
+
 
 button {
     display: inline-block;

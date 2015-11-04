@@ -10,6 +10,8 @@
     $guard_name = $_POST["guard_name"];
     $guard_email = $_POST["guard_email"];
     $guard_phone = $_POST["guard_phone"];
+    $friends = $_POST["friends"];
+    $friends = ($friends ? $friends : 'No friends');
 
     $mail->SMTPDebug = 3;
 
@@ -30,6 +32,7 @@
     $mail->Subject = "Student Registration";
     $body = "Student Information:\n<br>Name: $name\n<br>Email: $email\n<br>Phone: $phone\n<br>Past Experience: $experience\n<br>";
     $body .= "Guardian information:\n<br>Name: $guard_name\n<br>Email: $guard_email\n<br>Phone: $phone\n<br>";
+    $body .= "Friends:\n<br>$friends\n<br>";
     $body .= "Class ID: Introduction To Java Programming";
     $mail->Body = $body;
 

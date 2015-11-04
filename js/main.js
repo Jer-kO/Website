@@ -217,12 +217,15 @@
         events: {
             'click #registerSubmit': 'validateRegisterForm',
             'click #register-intro': 'showRegisterForm',
-            'click #registerBack': 'showClassList'
+            'click #registerBack': 'showClassList',
+            'click #addFriend': 'addFriend'
         },
 
         initialize: function (options) {
             this.registerForm = $('#register-form');
             this.introClass = $('#register-intro-form');
+            this.friendContainer = $('#friendContainer');
+            this.friendCount = 0;
         },
 
         showRegisterForm: function (e) {
@@ -277,15 +280,58 @@
             }
         },
 
+        addFriend: function (e) {
+            e.preventDefault();
+            if (this.friendCount >= 10) {
+                return;
+            }
+            this.friendCount++;
+            this.friendContainer.append(
+                '<div style="padding: 10px 0 10px 0; font-weight: bold;">Friend ' + this.friendCount + ':</div>' +
+                '<div style="margin-left: 30px;" class="form-section">' +
+                    '<label>Name:</label>' +
+                    '<input type="text" class="friend-name" />' +
+                    '<label>Email:</label>' + 
+                    '<input type="text" class="friend-email" />' +
+                '</div>'
+            );
+        },
+
+        _resetFriends: function () {
+            this.friendCount = 0;
+            this.friendContainer.empty();
+        },
+
+        _extractFriendData: function () {
+            var friendNames = this.$el.find('.friend-name');
+            var friendEmails = this.$el.find('.friend-email');
+            var returnString = '';
+            for (var i = 0; i < friendNames.length; i++) {
+                returnString = returnString + '('
+                returnString = returnString + friendNames[i].value;
+                returnString = returnString + ' / '
+                returnString = returnString + friendEmails[i].value;
+                returnString = returnString + ') '
+            }
+            return encodeURIComponent(returnString);
+        },
+
         sendRegistration: function (view) {
             var spinner = view.$el.find('.spinner');
             spinner.show();
             var submitBtn = $('#registerSubmit');
             submitBtn.addClass('disabled');
             submitBtn.attr('disabled', 'disabled');
+            var friendBtn = $('#addFriend');
+            friendBtn.addClass('disabled');
+            friendBtn.attr('disabled', 'disabled');
 
             var fields = view.$el.find('input, textarea');
             var data = fields.serialize();
+            if (this.friendCount > 0) {
+                var friendData = view._extractFriendData();
+                data = data + '&friends=' + friendData;
+            }
             $.ajax({
                 url: 'php/Register.php',
                 data: data,
@@ -294,6 +340,8 @@
                     spinner.hide();
                     submitBtn.removeClass('disabled');
                     submitBtn.removeAttr('disabled');
+                    friendBtn.removeClass('disabled');
+                    friendBtn.removeAttr('disabled');
 
                     var feedbackEl = $('.feedback');
                     feedbackEl.empty();
@@ -303,6 +351,7 @@
                             $(fields[i]).val('');
                         }
                     }
+                    view._resetFriends();
                 },
                 error: function (xhr, status, error) {
                     spinner.hide();
