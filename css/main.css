@@ -91,17 +91,18 @@ p, label {
 /* line 36, ../sass/main.scss */
 p, label, div, span {
   /*    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
   letter-spacing: 1px;
 }
 
-/* line 42, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 #container {
   position: relative;
   overflow: hidden;
 }
 
-/* line 47, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .divider {
   clear: both;
   width: 100%;
@@ -114,7 +115,7 @@ p, label, div, span {
 Start topbar styles
 ======================================================================
 */
-/* line 60, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .topbar {
   padding-left: 10%;
   position: fixed;
@@ -129,7 +130,7 @@ Start topbar styles
   z-index: 1000;
 }
 
-/* line 74, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .logo {
   box-sizing: border-box;
   display: block;
@@ -138,7 +139,7 @@ Start topbar styles
   margin: 15px 25px 15px 0;
 }
 
-/* line 82, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .navbar {
   display: block;
   float: left;
@@ -146,15 +147,15 @@ Start topbar styles
   padding: 25px;
 }
 
-/* line 89, ../sass/main.scss */
+/* line 90, ../sass/main.scss */
 .navbar .navbar-list-el {
   float: left;
   padding: 0 25px 0 25px;
 }
 
-/* line 94, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 .navbar .navbar-item {
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
   color: black;
   font-size: 25px;
   line-height: 1;
@@ -162,7 +163,7 @@ Start topbar styles
   letter-spacing: 0px;
 }
 
-/* line 103, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 .navbar .navbar-item:hover {
   color: #145D8A;
   cursor: pointer;
@@ -178,7 +179,7 @@ End topbar styles
 Start hamburger styles
 ======================================================================
 */
-/* line 120, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 .hamburger {
   float: right;
   padding: 25px;
@@ -196,7 +197,7 @@ Start hamburger styles
   user-select: none;
 }
 
-/* line 137, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 .top-bun, .patty, .bottom-bun {
   background: black;
   margin-bottom: 4px;
@@ -210,12 +211,12 @@ Start hamburger styles
   transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 }
 
-/* line 150, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .bottom-bun {
   margin-bottom: 0px;
 }
 
-/* line 154, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .dropdown {
   position: absolute;
   left: -90px;
@@ -237,12 +238,12 @@ Start hamburger styles
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
-/* line 175, ../sass/main.scss */
+/* line 176, ../sass/main.scss */
 .dropdown li {
   list-style: none;
 }
 
-/* line 179, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 .dropdown li .dropdown-item {
   display: block;
   padding: 8px 20px;
@@ -253,10 +254,10 @@ Start hamburger styles
   color: #333;
   white-space: nowrap;
   text-align: right;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
-/* line 192, ../sass/main.scss */
+/* line 193, ../sass/main.scss */
 .dropdown li .dropdown-item:hover {
   background-color: #EAEAEA;
 }
@@ -271,12 +272,12 @@ End hamburger styles
 Start content styles
 ======================================================================
 */
-/* line 208, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 #content {
   padding-top: 70px;
 }
 
-/* line 212, ../sass/main.scss */
+/* line 213, ../sass/main.scss */
 .content-title-bar {
   padding-top: 50px;
   padding-left: 10%;
@@ -287,17 +288,17 @@ Start content styles
   color: white;
 }
 
-/* line 222, ../sass/main.scss */
+/* line 223, ../sass/main.scss */
 .content-title {
   font-size: 60px;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 0 auto;
   text-align: left;
 }
 
-/* line 231, ../sass/main.scss */
+/* line 232, ../sass/main.scss */
 .content-subtitle {
   max-width: 800px;
   margin: 0 auto 0 auto;
@@ -307,13 +308,13 @@ Start content styles
   font-size: 20px;
 }
 
-/* line 240, ../sass/main.scss */
+/* line 241, ../sass/main.scss */
 .content-body {
   padding-left: 10%;
   padding-right: 10%;
 }
 
-/* line 245, ../sass/main.scss */
+/* line 246, ../sass/main.scss */
 .content-wrap {
   width: 100%;
   max-width: 800px;
@@ -330,14 +331,14 @@ End topbar styles
 Start Home page styles
 ======================================================================
 */
-/* line 264, ../sass/main.scss */
+/* line 265, ../sass/main.scss */
 .panel-wrap {
   clear: both;
   max-width: 800px;
   margin: 0 auto 0 auto;
 }
 
-/* line 270, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 .panel-content {
   clear: both;
   padding: 20px 0 20px 0;
@@ -349,38 +350,38 @@ Start Home page styles
   margin: 0 auto 0 auto;
 }
 
-/* line 281, ../sass/main.scss */
+/* line 282, ../sass/main.scss */
 .segment {
   width: 100%;
   max-width: 350px;
   margin: 50px auto 50px auto;
 }
 
-/* line 287, ../sass/main.scss */
+/* line 288, ../sass/main.scss */
 .segment-header {
   text-align: center;
   font-size: 24px;
 }
 
-/* line 292, ../sass/main.scss */
+/* line 293, ../sass/main.scss */
 .segment-body {
   text-align: center;
   font-size: 15px;
 }
 
-/* line 297, ../sass/main.scss */
+/* line 298, ../sass/main.scss */
 .segment-icon {
   margin: 0 auto 10px auto;
   width: 90px;
   height: 90px;
 }
 
-/* line 303, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 .left {
   float: left;
 }
 
-/* line 307, ../sass/main.scss */
+/* line 308, ../sass/main.scss */
 .right {
   float: right;
 }
@@ -395,33 +396,33 @@ End Home page styles
 Start about page styles
 ======================================================================
 */
-/* line 323, ../sass/main.scss */
+/* line 324, ../sass/main.scss */
 .profile-container {
   width: 100%;
   margin: 60px 0 0 0;
 }
 
-/* line 328, ../sass/main.scss */
+/* line 329, ../sass/main.scss */
 .profile-graphic {
   margin-top: 10px;
   display: block;
   float: left;
 }
 
-/* line 334, ../sass/main.scss */
+/* line 335, ../sass/main.scss */
 .profile-info {
   display: block;
   margin-left: 170px;
 }
 
-/* line 339, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 .profile-info h1 {
   margin: 0 0 5px 0;
   color: black;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
-/* line 345, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .profile-info p {
   margin: 0 0 0 0;
 }
@@ -436,24 +437,24 @@ End about page styles
 Start form styles
 ======================================================================
 */
-/* line 361, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 label {
   display: block;
 }
 
-/* line 365, ../sass/main.scss */
+/* line 366, ../sass/main.scss */
 input {
   display: block;
   height: 34px;
 }
 
-/* line 370, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 textarea {
   max-height: 300px;
   height: 150px;
 }
 
-/* line 375, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 input, textarea {
   width: 100%;
   padding: 6px 12px;
@@ -471,7 +472,7 @@ input, textarea {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-/* line 392, ../sass/main.scss */
+/* line 393, ../sass/main.scss */
 input:focus, textarea:focus {
   border-color: #66afe9;
   outline: 0;
@@ -479,12 +480,12 @@ input:focus, textarea:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-/* line 399, ../sass/main.scss */
+/* line 400, ../sass/main.scss */
 .form-section {
   margin-bottom: 10px;
 }
 
-/* line 403, ../sass/main.scss */
+/* line 404, ../sass/main.scss */
 .btn-primary {
   float: right;
   color: #fff;
@@ -492,14 +493,14 @@ input:focus, textarea:focus {
   border-color: #2E6DA4;
 }
 
-/* line 410, ../sass/main.scss */
+/* line 411, ../sass/main.scss */
 .btn-primary:hover {
   color: #fff;
   background-color: #286090;
   border-color: #204D74;
 }
 
-/* line 416, ../sass/main.scss */
+/* line 417, ../sass/main.scss */
 .btn-primary.disabled {
   color: #fff;
   background-color: #286090;
@@ -509,12 +510,28 @@ input:focus, textarea:focus {
   opacity: .65;
 }
 
-/* line 425, ../sass/main.scss */
+/* line 426, ../sass/main.scss */
 .btn-primary:focus {
   outline: none;
 }
 
-/* line 429, ../sass/main.scss */
+/* line 430, ../sass/main.scss */
+.btn-xs {
+  float: none;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/* line 438, ../sass/main.scss */
+.btn-block {
+  float: none;
+  display: block;
+  width: 100%;
+}
+
+/* line 445, ../sass/main.scss */
 button {
   display: inline-block;
   padding: 8px 14px;
@@ -537,23 +554,23 @@ button {
   border-radius: 4px;
 }
 
-/* line 451, ../sass/main.scss */
+/* line 467, ../sass/main.scss */
 .error, .feedback {
   height: 20px;
 }
 
-/* line 455, ../sass/main.scss */
+/* line 471, ../sass/main.scss */
 .error {
   color: red;
 }
 
-/* line 459, ../sass/main.scss */
+/* line 475, ../sass/main.scss */
 .spinner {
   float: right;
   margin: 3.5px 5px 3.5px 5px;
 }
 
-/* line 464, ../sass/main.scss */
+/* line 480, ../sass/main.scss */
 .registration-form {
   padding: 10px;
   border: 2px solid #E5E5E5;
@@ -571,7 +588,7 @@ End form styles
 Start table styles
 ======================================================================
 */
-/* line 483, ../sass/main.scss */
+/* line 499, ../sass/main.scss */
 table {
   margin: 30px 0 30px 0;
   width: 100%;
@@ -580,7 +597,7 @@ table {
   border-collapse: collapse;
 }
 
-/* line 491, ../sass/main.scss */
+/* line 507, ../sass/main.scss */
 table > tbody > tr > td, table > tbody > tr > th {
   text-align: left;
   padding: 8px;
@@ -589,7 +606,7 @@ table > tbody > tr > td, table > tbody > tr > th {
   border-top: 1px solid #ddd;
 }
 
-/* line 499, ../sass/main.scss */
+/* line 515, ../sass/main.scss */
 table > thead > tr > th {
   text-align: left;
   padding: 8px;
@@ -608,17 +625,17 @@ End table styles
 Start connect4 styles
 ======================================================================
 */
-/* line 519, ../sass/main.scss */
+/* line 535, ../sass/main.scss */
 .connect4-app {
   padding-bottom: 100px;
 }
-/* line 522, ../sass/main.scss */
+/* line 538, ../sass/main.scss */
 .connect4-app .board {
   max-height: 250px;
   height: 250px;
   font-family: "Lucida Console", Monaco, monospace;
 }
-/* line 528, ../sass/main.scss */
+/* line 544, ../sass/main.scss */
 .connect4-app .btn-primary {
   float: none;
   display: inline-block;
@@ -626,12 +643,12 @@ Start connect4 styles
   background-color: #145D8A;
   border-color: #145D8A;
 }
-/* line 534, ../sass/main.scss */
+/* line 550, ../sass/main.scss */
 .connect4-app .btn-primary:hover {
   background-color: #4F8DB3;
   border-color: #145D8A;
 }
-/* line 540, ../sass/main.scss */
+/* line 556, ../sass/main.scss */
 .connect4-app .game-message {
   height: 24px;
 }
@@ -646,12 +663,12 @@ End connect4 styles
 Start footer styles
 ======================================================================
 */
-/* line 557, ../sass/main.scss */
+/* line 573, ../sass/main.scss */
 #about, #contact, #register {
   margin-bottom: 200px;
 }
 
-/* line 561, ../sass/main.scss */
+/* line 577, ../sass/main.scss */
 .footer {
   height: 50px;
   background-color: black;
@@ -662,7 +679,7 @@ Start footer styles
 End footer styles
 ======================================================================
 */
-/* line 572, ../sass/main.scss */
+/* line 588, ../sass/main.scss */
 .cta {
   width: 100%;
   position: absolute;
@@ -671,7 +688,7 @@ End footer styles
   padding-right: 24px;
 }
 
-/* line 580, ../sass/main.scss */
+/* line 596, ../sass/main.scss */
 .class-features {
   padding: 0;
   margin-top: 20px;
@@ -682,7 +699,7 @@ End footer styles
   color: #145D8A;
 }
 
-/* line 590, ../sass/main.scss */
+/* line 606, ../sass/main.scss */
 .class-features li {
   position: relative;
   padding: 10px 0;
@@ -693,7 +710,7 @@ End footer styles
   border-top: 1px solid #e8e8e8;
 }
 
-/* line 600, ../sass/main.scss */
+/* line 616, ../sass/main.scss */
 .class-container {
   margin-top: 30px;
   margin-left: auto;
@@ -713,7 +730,7 @@ End footer styles
   transition: 0.1s all linear;
 }
 
-/* line 619, ../sass/main.scss */
+/* line 635, ../sass/main.scss */
 .class-container:hover {
   border-color: #66afe9;
   outline: 0;
@@ -721,14 +738,14 @@ End footer styles
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-/* line 626, ../sass/main.scss */
+/* line 642, ../sass/main.scss */
 .class-container h2 {
   color: #145D8A;
   font-size: 18px;
   margin-top: 10px;
 }
 
-/* line 632, ../sass/main.scss */
+/* line 648, ../sass/main.scss */
 .class-container p {
   margin: 8px auto;
   min-height: 4em;
@@ -737,7 +754,7 @@ End footer styles
   color: #888;
 }
 
-/* line 640, ../sass/main.scss */
+/* line 656, ../sass/main.scss */
 .class-container .btn-primary {
   display: block;
   width: 100%;
