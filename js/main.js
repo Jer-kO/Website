@@ -226,6 +226,7 @@
             this.introClass = $('#register-intro-form');
             this.friendContainer = $('#friendContainer');
             this.friendCount = 0;
+            this.failCount = 0;
         },
 
         showRegisterForm: function (e) {
@@ -354,13 +355,18 @@
                     view._resetFriends();
                 },
                 error: function (xhr, status, error) {
-                    spinner.hide();
-                    submitBtn.removeClass('disabled');
-                    submitBtn.removeAttr('disabled');
+                    view.failCount++;
+                    if (view.failCount == 1) {
+                        view.sendRegistration(view);
+                    } else {
+                        spinner.hide();
+                        submitBtn.removeClass('disabled');
+                        submitBtn.removeAttr('disabled');
 
-                    var errorEl = $('.error');
-                    errorEl.empty();
-                    errorEl.append('An unexpected error has occured.  Please try again later.');
+                        var errorEl = $('.error');
+                        errorEl.empty();
+                        errorEl.append('An unexpected error has occured.  Please try again later.');
+                    }
                 }
             });
         }
